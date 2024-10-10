@@ -1,5 +1,8 @@
-import { youtubedlv2, youtubedl } from '@bochilteam/scraper'
+import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
+import yts from 'yt-search'
+import ytdl from 'ytdl-core'
+import axios from 'axios'
 let handler = async (m, { conn, args, command }) => {
   if (!args[0]) return conn.reply(m.chat, `🚩 Ingresa un enlace del vídeo de YouTube junto al comando.`, m, rcanal)
   await m.react('🕓')
